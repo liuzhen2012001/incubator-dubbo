@@ -22,7 +22,7 @@
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
-    <groupId>com.alibaba</groupId>
+    <groupId>com.fengjr</groupId>
     <artifactId>dubbo</artifactId>
     <version>2.5.10</version>
     <packaging>jar</packaging>
@@ -36,6 +36,7 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
     <organization>
         <name>The Dubbo Project</name>
         <url>http://dubbo.io</url>
@@ -304,24 +305,7 @@
     <properties>
         <updateReleaseInfo>true</updateReleaseInfo>
     </properties>
-    <issueManagement>
-        <system>github</system>
-        <url>https://github.com/alibaba/dubbo/issues</url>
-    </issueManagement>
-    <scm>
-        <url>https://github.com/alibaba/dubbo</url>
-        <connection>scm:https://github.com/alibaba/dubbo</connection>
-        <developerConnection>scm:svn:https://github.com/alibaba/dubbo</developerConnection>
-    </scm>
-    <mailingLists>
-        <mailingList>
-            <name>Dubbo User Mailling List</name>
-            <subscribe>dubbo-subscribe AT googlegroups DOT com</subscribe>
-            <unsubscribe>dubbo-unsubscribe AT googlegroups DOT com</unsubscribe>
-            <post>dubbo AT googlegroups DOT com</post>
-            <archive>http://groups.google.com/group/dubbo</archive>
-        </mailingList>
-    </mailingLists>
+
     <developers>
         <developer>
             <id>dubbo.io</id>
@@ -332,4 +316,17 @@
             <organizationUrl>http://dubbo.io</organizationUrl>
         </developer>
     </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>fengjr</id>
+            <name>fengjr-group</name>
+            <url>http://mvn.fengjr.inc:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>fengjr</id>
+            <name>fengjr-group</name>
+            <url>http://mvn.fengjr.inc:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

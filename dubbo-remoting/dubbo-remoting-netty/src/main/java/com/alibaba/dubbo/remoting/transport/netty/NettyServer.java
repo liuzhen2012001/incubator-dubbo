@@ -57,6 +57,8 @@ public class NettyServer extends AbstractServer implements Server {
 
     private org.jboss.netty.channel.Channel channel;
 
+    private static String DEFAULT_BACK_LOG ="2048";
+
     public NettyServer(URL url, ChannelHandler handler) throws RemotingException {
         super(url, ChannelHandlers.wrap(handler, ExecutorUtil.setThreadName(url, SERVER_THREAD_POOL_NAME)));
     }
@@ -75,6 +77,12 @@ public class NettyServer extends AbstractServer implements Server {
         // https://issues.jboss.org/browse/NETTY-379
         // final Timer timer = new HashedWheelTimer(new NamedThreadFactory("NettyIdleTimer", true));
         bootstrap.setOption("child.tcpNoDelay", true);
+
+        /**
+         * backlog 默认值50.重新上线后大量请求第三次握手异常，
+         * 修改为2048
+         */
+        bootstrap.setOption("backlog",DEFAULT_BACK_LOG);
         bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
             public ChannelPipeline getPipeline() {
                 NettyCodecAdapter adapter = new NettyCodecAdapter(getCodec(), getUrl(), NettyServer.this);
