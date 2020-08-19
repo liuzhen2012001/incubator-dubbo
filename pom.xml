@@ -490,95 +490,18 @@
         </plugins>
     </build>
 
-    <issueManagement>
-        <system>github</system>
-        <url>https://github.com/alibaba/dubbo/issues</url>
-    </issueManagement>
-    <scm>
-        <url>https://github.com/alibaba/dubbo</url>
-        <connection>https://github.com/alibaba/dubbo.git</connection>
-    </scm>
-    <mailingLists>
-        <mailingList>
-            <name>Dubbo User Mailling List</name>
-            <subscribe>dubbo-subscribe AT googlegroups DOT com</subscribe>
-            <unsubscribe>dubbo-unsubscribe AT googlegroups DOT com</unsubscribe>
-            <post>dubbo AT googlegroups DOT com</post>
-            <archive>http://groups.google.com/group/dubbo</archive>
-        </mailingList>
-    </mailingLists>
-    <developers>
-        <developer>
-            <name>QianXiao(Shawn)</name>
-            <id>shawn.qianx</id>
-            <email>shawn.qianx (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>LiangFei(William)</name>
-            <id>william.liangf</id>
-            <email>william.liangf (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>LiDing(Jerry)</name>
-            <id>ding.lid</id>
-            <email>ding.lid (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>LiuChao(Charles)</name>
-            <id>chao.liuc</id>
-            <email>chao.liuc (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>LiuHaoMin(Ludvik)</name>
-            <id>haoming.liuhm</id>
-            <email>haoming.liuhm (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>ChenLei(Tony)</name>
-            <id>tony.chenl</id>
-            <email>tony.chenl (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>LvGang(Kimi)</name>
-            <id>gang.lvg</id>
-            <email>gang.lvg (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <name>WuXiaoFei(Teaey)</name>
-            <id>xiaofei.wxf</id>
-            <email>xiaofei.wxf (AT) alibaba-inc.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
+
+
+    <distributionManagement>
+        <repository>
+            <id>fengjr</id>
+            <name>lib-releases</name>
+            <url>http://mvn.fengjr.inc:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>fengjr</id>
+            <name>lib-snapshots</name>
+            <url>http://mvn.fengjr.inc:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
